@@ -16,7 +16,7 @@
     "test": "eslint test.js"
   },
   "devDependencies": {
-    "eslint": "^3.11.1"
+    "eslint": "^6.6.0"
   },
   "keywords": [
     "eslint",
