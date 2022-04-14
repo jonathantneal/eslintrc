@@ -7,3 +7,15 @@ window.fn = module.exports = {
 function fn() {
 	return this;
 }
+
+export function efn() {
+	return this
+}
+
+export async function eafn() {
+	return this;
+}
+
+export const ecfn = () => {}
+
+export const ecafn = async () => {}
