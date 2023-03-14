@@ -9,16 +9,52 @@
 
 Add [eslint] and [eslint-config-dev] to your project:
 
-```sh
+```shell
 npm install --save-dev eslint eslint-config-dev
 ```
 
-Then, add this configuration to your `package.json`:
+Then, add the following configuration to your `package.json`:
 
 ```json
 {
   "eslintConfig": {
     "extends": "dev"
+  }
+}
+```
+
+### Usage with TypeScript
+
+After the previous install instructions, add [typescript-eslint] to your project:
+
+```shell
+npm install --save-dev @typescript-eslint/parser @typescript-eslint/eslint-plugin
+```
+
+Then, add the following configuration to your `package.json`:
+
+```json
+{
+  "eslintConfig": {
+    "extends": "dev/ts"
+  }
+}
+```
+
+### Usage with Astro
+
+After the previous install instructions, add [eslint-plugin-astro] and [eslint-plugin-jsx-a11y] to your project:
+
+```shell
+npm install --save-dev eslint-plugin-astro eslint-plugin-jsx-a11y
+```
+
+Then, add the following configuration to your `package.json`:
+
+```json
+{
+  "eslintConfig": {
+    "extends": "dev/astro"
   }
 }
 ```
@@ -34,3 +70,6 @@ Then, add this configuration to your `package.json`:
 
 [eslint]: https://github.com/eslint/eslint
 [eslint-config-dev]: https://github.com/jonathantneal/eslint-config-dev
+[eslint-plugin-astro]: https://ota-meshi.github.io/eslint-plugin-astro/
+[eslint-plugin-jsx-a11y]: https://github.com/jsx-eslint/eslint-plugin-jsx-a11y#readme
+[typescript-eslint]: https://typescript-eslint.io/getting-started

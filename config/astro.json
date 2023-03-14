@@ -1,0 +1,69 @@
+{
+	"$schema": "https://json.schemastore.org/eslintrc.json",
+	"root": true,
+	"extends": [
+		"./ts.json"
+	],
+	"plugins": [
+		"eslint-plugin-astro"
+	],
+	"overrides": [
+		{
+			"files": [
+				"*.astro"
+			],
+			"plugins": [
+				"astro"
+			],
+			"env": {
+				"astro/astro": true,
+				"browser": true,
+				"es2022": true,
+				"node": true
+			},
+			"parser": "astro-eslint-parser",
+			"parserOptions": {
+				"parser": "@typescript-eslint/parser",
+				"extraFileExtensions": [
+					".astro"
+				],
+				"sourceType": "module"
+			},
+			"rules": {
+				"astro/no-conflict-set-directives": "error",
+				"astro/no-deprecated-astro-canonicalurl": "error",
+				"astro/no-deprecated-astro-fetchcontent": "error",
+				"astro/no-deprecated-astro-resolve": "error",
+				"astro/no-unused-define-vars-in-style": "error",
+
+				"astro/jsx-a11y/alt-text": "error",
+				"astro/jsx-a11y/aria-props": "error",
+				"astro/jsx-a11y/aria-role": ["error", { "ignoreNonDOM": true }],
+				"astro/jsx-a11y/html-has-lang": "error",
+				"astro/jsx-a11y/role-has-required-aria-props": "error",
+				"astro/jsx-a11y/role-supports-aria-props": "error",
+
+				"astro/semi": ["off", "never"],
+
+				"eol-last": ["error", "never"]
+			}
+		},
+		{
+			"files": [
+				"**/*.astro/*.js",
+				"*.astro/*.js"
+			],
+			"env": {
+				"browser": true,
+				"es2022": true,
+				"node": true
+			},
+			"parserOptions": {
+				"sourceType": "module"
+			},
+			"rules": {
+				"prettier/prettier": "off"
+			}
+		}
+	]
+}
