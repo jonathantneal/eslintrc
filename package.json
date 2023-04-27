@@ -1,6 +1,6 @@
 {
 	"name": "eslint-config-dev",
-	"version": "3.2.0",
+	"version": "3.3.0",
 	"description": "A shareable configuration package for eslint",
 	"author": "Jonathan Neal <jonathantneal@hotmail.com>",
 	"license": "CC0-1.0",
@@ -17,10 +17,13 @@
 		"./package.json": "./package.json",
 		"./astro": "./config/astro.json",
 		"./astro-strict": "./config/astro-strict.json",
+		"./astro/nosemi": "./config/astro-nosemi.json",
 		"./js": "./config/js.json",
 		"./js-strict": "./config/js-strict.json",
+		"./js/nosemi": "./config/js-nosemi.json",
 		"./ts": "./config/ts.json",
-		"./ts-strict": "./config/ts-strict.json"
+		"./ts-strict": "./config/ts-strict.json",
+		"./ts/nosemi": "./config/ts-nosemi.json"
 	},
 	"scripts": {
 		"prepublish": "npm test",
